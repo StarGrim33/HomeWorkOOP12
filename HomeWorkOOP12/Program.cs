@@ -96,14 +96,14 @@
     {
         public Enclosure Build(int animalsCount, string name)
         {
-            List<Animals> predators = new();
+            List<Animals> animals = new();
 
             for (int i = 0; i < animalsCount; i++)
             {
-                predators.Add(CreateRandomAnimal());
+                animals.Add(CreateRandomAnimal());
             }
 
-            return new Enclosure(name, predators);
+            return new Enclosure(name, animals);
         }
 
         private Animals CreateRandomAnimal()
